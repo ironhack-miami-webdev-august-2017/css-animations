@@ -1,0 +1,63 @@
+@keyframes artichoke {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.container {
+  animation-name: artichoke;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background-color: #00D1AE;
+  margin: 28.87px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 28.87px solid #00D1AE;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 28.87px solid #00D1AE;
+}
+
+
+
+.box {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #3838FF;
+    transition: 2s cubic-bezier(.17, .67, .87, .11) 1s;
+}
+
+.box:hover {
+    background-color: #00D1AE;
+    width: 200px;
+    height: 200px;
+    transform: rotate(360deg);
+}
